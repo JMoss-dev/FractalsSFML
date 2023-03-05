@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <string>
 
 #include <SFML/Graphics.hpp>
 
@@ -27,6 +28,7 @@ int main()
 
     // performance
     sf::Image image;
+    image.create(screenWidth, screenHeight, sf::Color::White);
 
     while (window.isOpen())
     {
@@ -50,13 +52,19 @@ int main()
                     // pixel.setFillColor(color);
                     // window.draw(pixel);
                 }
-                pixel.setFillColor(color);
-                pixel.setPosition(i, j);
-                window.draw(pixel);
+                // pixel.setFillColor(color);
+                // pixel.setPosition(i, j);
+                // window.draw(pixel);
+                image.setPixel(i, j, color);
             }
             // std::cout << "column " << i << " finished\n";
         }
-        // display
+        // draw
+        //  display
+        sf::Texture texture;
+        texture.loadFromImage(image);
+        sf::Sprite sprite(texture);
+        window.draw(sprite);
         window.display();
     }
 
