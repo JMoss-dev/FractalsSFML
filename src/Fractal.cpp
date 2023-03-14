@@ -4,17 +4,18 @@
 
 #include <SFML/Graphics.hpp>
 
-std::vector<std::vector<int>> createFractal(int xMin, int xMax, int yMin, int yMax, int setNumIterations = 50)
+std::vector<std::vector<int>> createFractal(double xMin, double xMax, double yMin, double yMax, int setNumIterations = 50)
 {
     int numIterations = setNumIterations;
     int rad = 2;
-    double resolution = 0.001;
+    double resolution = 0.01;
 
     std::vector<std::vector<int>> fractalMat; // x,y
-    int numX = (abs(xMin) + abs(xMax)) / resolution + 1;
-    int numY = (abs(yMin) + abs(yMax)) / resolution + 1;
+    int numX = (fabs(xMin) + fabs(xMax)) / resolution + 1;
+    int numY = (fabs(yMin) + fabs(yMax)) / resolution + 1;
     std::vector<int> temp(numY, 0);
     fractalMat.resize(numX, temp);
+    std::cout << numX << " | " << numY << "\n";
 
     for (double cr = xMin; cr <= xMax; cr += resolution)
     {
