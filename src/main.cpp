@@ -42,36 +42,38 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Period))
         {
             numIterations++;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            std::cout << numIterations << std::endl;
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Comma))
         {
             numIterations--;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            std::cout << numIterations << std::endl;
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
         {
             yMin -= (fabs(yMin) + fabs(yMax)) / 5;
             yMax -= (fabs(yMin) + fabs(yMax)) / 5;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         {
             yMin += (fabs(yMin) + fabs(yMax)) / 5;
             yMax += (fabs(yMin) + fabs(yMax)) / 5;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         {
             xMin -= (fabs(yMin) + fabs(yMax)) / 5;
             xMax -= (fabs(yMin) + fabs(yMax)) / 5;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
         {
             xMin += (fabs(yMin) + fabs(yMax)) / 5;
             xMax += (fabs(yMin) + fabs(yMax)) / 5;
-            auto fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
+            fractalMat = createFractal(xMin, xMax, yMin, yMax, numIterations);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::PageUp))
         {

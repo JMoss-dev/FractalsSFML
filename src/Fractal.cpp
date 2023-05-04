@@ -7,6 +7,7 @@
 std::vector<std::vector<int>> createFractal(double xMin, double xMax, double yMin, double yMax, int setNumIterations = 50)
 {
     int numIterations = setNumIterations;
+    std::cout << numIterations << std::endl;
     int rad = 2;
     double resolution = 0.01;
 
