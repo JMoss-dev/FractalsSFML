@@ -87,6 +87,7 @@ int main()
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::PageDown))
         {
+
             /*zoom -= 0.2;
             xMin = xMin / zoom;
             xMax = xMax / zoom;
